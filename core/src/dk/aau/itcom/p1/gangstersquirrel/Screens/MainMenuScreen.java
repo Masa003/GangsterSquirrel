@@ -10,7 +10,6 @@ public class MainMenuScreen implements Screen {
 
     final MainGameClass game;
 
-    //tex
     private static final int PLAY_BUTTON_WIDTH = 300;
     private static final int PLAY_BUTTON_HEIGHT = 150;
     private static final int EXIT_BUTTON_WIDTH = 330;
@@ -24,9 +23,6 @@ public class MainMenuScreen implements Screen {
     public MainMenuScreen(MainGameClass game) {
         this.game = game;
 
-        //camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getWidth());
-
-        //tex
         playButtonActive = new Texture("play_button_active.png");
         playButtonInactive = new Texture("play_button_inactive.png");
         exitButtonActive = new Texture("exit_button_active.png");

@@ -7,9 +7,9 @@ import dk.aau.itcom.p1.gangstersquirrel.Screens.MainMenuScreen;
 
 public class MainGameClass extends Game {
 
-	public static final int WIDTH = 1280;   //Game width
-	public static final int HEIGHT = 720;  //Game height
-	public static final float PPM = 100; 	 //Pixels per meter
+	public static final int WIDTH = 1280; //Game width
+	public static final int HEIGHT = 720; //Game height
+	public static final float PPM = 100;  //Pixels per meter
 
 	public SpriteBatch batch; //Contains every sprite in the game
 	public BitmapFont default_font;
