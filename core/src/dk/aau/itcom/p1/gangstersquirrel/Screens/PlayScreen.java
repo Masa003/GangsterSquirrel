@@ -25,11 +25,11 @@ public class PlayScreen implements Screen {
         this.game = game;
 
         camera = new OrthographicCamera();
-        viewport = new FitViewport(MainGameClass.WIDTH, MainGameClass.HEIGHT, camera);
+        viewport = new FitViewport(MainGameClass.WIDTH / MainGameClass.PPM, MainGameClass.HEIGHT / MainGameClass.PPM, camera);
 
         mapLoader = new TmxMapLoader();
         map = mapLoader.load("level_1.tmx");
-        renderer = new OrthogonalTiledMapRenderer(map);
+        renderer = new OrthogonalTiledMapRenderer(map, 1 / MainGameClass.PPM);
         camera.position.set(viewport.getWorldWidth() / 2, viewport.getWorldHeight() / 2, 0);
     }
 
@@ -47,7 +47,7 @@ public class PlayScreen implements Screen {
 
     public void handleInput(float deltaTime) {
         if (Gdx.input.isTouched()) {
-            camera.position.x += 100 * deltaTime;
+            camera.position.x += 100 / MainGameClass.PPM * deltaTime;
         }
     }
 
